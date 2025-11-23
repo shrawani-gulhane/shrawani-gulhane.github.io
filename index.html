@@ -3,252 +3,402 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shrawani Gulhane | Data Scientist Portfolio</title>
+  <title>Shrawani Gulhane | Data Science Portfolio</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Devicon for tech logos -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
   <meta name="description"
-    content="Portfolio of Shrawani Gulhane – Data Scientist & ML Engineer focused on Generative AI, Computer Vision, Federated Learning, Analytics & Data Science." />
+        content="Portfolio of Shrawani Gulhane – Data Scientist & ML Engineer focused on Generative AI, Computer Vision, Federated Learning, and Analytics." />
 </head>
 
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-slate-50 text-slate-900">
 
-  <!-- MAIN CONTAINER -->
-  <div class="max-w-5xl mx-auto px-5 py-8">
+  <!-- PAGE WRAPPER -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-4 py-6 sm:py-10">
 
     <!-- NAVBAR -->
-    <header class="flex items-center justify-between mb-12">
+    <header class="flex items-center justify-between mb-8 sm:mb-10">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 flex items-center justify-center bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 rounded-2xl font-bold">
+        <div class="w-10 h-10 flex items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold">
           SG
         </div>
         <div>
-          <p class="font-semibold text-base">Shrawani Gulhane</p>
-          <p class="text-xs text-slate-400">Data Science @ NC State</p>
+          <p class="font-semibold text-sm sm:text-base">Shrawani Gulhane</p>
+          <p class="text-xs text-slate-500">Data Science @ NC State</p>
         </div>
       </div>
 
-      <nav class="hidden md:flex gap-6 text-sm text-slate-300">
-        <a href="#about" class="hover:text-emerald-300">About</a>
-        <a href="#skills" class="hover:text-emerald-300">Skills</a>
-        <a href="#experience" class="hover:text-emerald-300">Experience</a>
-        <a href="#projects" class="hover:text-emerald-300">Projects</a>
-        <a href="#education" class="hover:text-emerald-300">Education</a>
-        <a href="#contact" class="hover:text-emerald-300">Contact</a>
+      <nav class="hidden md:flex gap-5 text-xs sm:text-sm text-slate-600">
+        <a href="#about" class="hover:text-emerald-600">About</a>
+        <a href="#skills" class="hover:text-emerald-600">Skills</a>
+        <a href="#experience" class="hover:text-emerald-600">Experience</a>
+        <a href="#projects" class="hover:text-emerald-600">Projects</a>
+        <a href="#education" class="hover:text-emerald-600">Education</a>
+        <a href="#contact" class="hover:text-emerald-600">Contact</a>
       </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="mb-16">
-      <p class="text-xs uppercase tracking-widest text-emerald-300 mb-3">
-        Data Science • Machine Learning • Generative AI
-      </p>
+    <!-- HERO -->
+    <section class="mb-12 sm:mb-14">
+      <div class="grid md:grid-cols-[1.7fr,1.2fr] gap-8 items-center">
+        <div>
+          <p class="text-[11px] tracking-[0.25em] uppercase text-emerald-700 mb-3">
+            Data Science • Machine Learning • Generative AI
+          </p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+            Turning messy data into
+            <span class="text-emerald-700">decision-ready insight.</span>
+          </h1>
+          <p class="text-sm sm:text-base text-slate-600 mb-5 max-w-2xl">
+            I’m a Data Science graduate student at
+            <span class="font-semibold text-slate-800">North Carolina State University</span>,
+            building end-to-end systems in generative computer vision, federated learning,
+            and large-scale analytics. I specialize in Document AI (Donut, LayoutLMv3, LLaVA),
+            forecasting, and model optimization.
+          </p>
 
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Turning messy data into <span class="text-emerald-300">decision-ready intelligence.</span>
-      </h1>
+          <!-- data metrics -->
+          <div class="grid grid-cols-3 gap-3 mb-5 text-center text-[11px] sm:text-xs">
+            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
+              <p class="font-semibold text-emerald-700 text-sm sm:text-base">10k+</p>
+              <p class="text-slate-500">Invoices parsed</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
+              <p class="font-semibold text-emerald-700 text-sm sm:text-base">200M+</p>
+              <p class="text-slate-500">Clinical rows in FL</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
+              <p class="font-semibold text-emerald-700 text-sm sm:text-base">97%</p>
+              <p class="text-slate-500">CV accuracy</p>
+            </div>
+          </div>
 
-      <p class="text-slate-300 text-sm md:text-base max-w-3xl mb-8">
-        I’m a Data Science graduate student at <span class="text-slate-100 font-medium">North Carolina State University</span>, building
-        machine learning systems across generative computer vision, federated learning, and large-scale analytics. I specialize
-        in Document AI, forecasting, and model optimization, with experience in Donut, LayoutLMv3, LLaVA, and deep learning pipelines.
-      </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#contact"
+               class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition">
+              Contact Me
+            </a>
+            <a href="#projects"
+               class="px-5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-sm text-emerald-800 hover:border-emerald-400 transition">
+              View Projects
+            </a>
+          </div>
+        </div>
 
-      <div class="flex flex-wrap gap-4">
-        <a href="#contact" class="px-6 py-3 bg-emerald-500 text-slate-900 font-semibold rounded-xl hover:bg-emerald-400 transition">Contact Me</a>
-        <a href="#projects" class="px-6 py-3 border border-slate-600 rounded-xl hover:border-emerald-400/70 hover:text-emerald-200 transition">View Projects</a>
+        <!-- simple “data card” panel -->
+        <div class="md:justify-self-end">
+          <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm">
+            <p class="text-xs font-semibold text-emerald-700 mb-2 uppercase tracking-wide">
+              Currently seeking
+            </p>
+            <ul class="space-y-1 text-xs sm:text-sm text-slate-700 mb-3">
+              <li>• Data Scientist (Entry-level / New Grad)</li>
+              <li>• Machine Learning Engineer</li>
+              <li>• Data / Analytics Engineer</li>
+            </ul>
+            <div class="border-t border-slate-200 pt-3 text-[11px] sm:text-xs text-slate-600">
+              <p>📍 Raleigh, NC — Open to relocate</p>
+              <p>🎓 F-1 visa student, targeting H-1B-friendly roles</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="mb-16">
-      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> About Me
+    <!-- ABOUT -->
+    <section id="about" class="mb-12 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-3 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> About Me
       </h2>
-
-      <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-3">
-        I’m pursuing my **Master’s in Foundations of Data Science** at NC State University, with a B.Tech in **Artificial Intelligence & Data Science**.
-        My work spans building robust end-to-end ML systems, automating document processing workflows, forecasting, and engineering scalable
-        pipelines for production.
+      <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+        I’m a Data Scientist and graduate student in the
+        <span class="font-semibold">Foundations of Data Science</span> program at NC State.
+        My background combines a <span class="font-semibold">B.Tech in Artificial Intelligence &amp; Data Science</span>
+        with hands-on industry experience across **invoice automation, legal document summarization,
+        forecasting, and analytics engineering**.
       </p>
-
-      <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-        I love solving real-world problems using data, and I’m currently seeking **Data Scientist, Machine Learning Engineer, or Data Analyst**
-        roles for internships and full-time.
+      <p class="text-sm sm:text-base text-slate-700 leading-relaxed mt-3">
+        I enjoy owning the full lifecycle: from cleaning and structuring data, to modeling,
+        to building dashboards or APIs that teams can actually use. I’m especially excited
+        about problems at the intersection of <span class="text-emerald-700 font-medium">
+        machine learning, product thinking, and real-world impact.</span>
       </p>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="mb-16">
-      <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> Skills
+    <!-- SKILLS -->
+    <section id="skills" class="mb-12 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-5 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> Skills
       </h2>
 
       <div class="grid md:grid-cols-3 gap-5">
 
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="text-emerald-300 font-medium mb-2">Machine Learning & AI</h3>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>Regression & Classification</li>
-            <li>Time Series Forecasting</li>
-            <li>CNNs, LSTMs, SVM</li>
-            <li>Generative CV: Donut, LayoutLMv3, LLaVA</li>
-            <li>Model Evaluation, Feature Engineering</li>
+        <!-- ML / AI -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm font-semibold text-emerald-700 mb-2">
+            🧠 Machine Learning &amp; AI
+          </h3>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>• Regression &amp; Classification</li>
+            <li>• Time Series Forecasting</li>
+            <li>• CNNs, LSTMs, SVM, Decision Trees</li>
+            <li>• Generative CV: Donut, LayoutLMv3, LLaVA</li>
+            <li>• Feature Engineering &amp; Model Evaluation</li>
           </ul>
         </div>
 
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="text-emerald-300 font-medium mb-2">Data & Analytics</h3>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>Data Cleaning & Preprocessing</li>
-            <li>EDA, Data Mining</li>
-            <li>ETL Pipelines & Automation</li>
-            <li>BigQuery, SQL Optimization</li>
-            <li>Power BI, Tableau, Excel</li>
+        <!-- Data / Analytics -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm font-semibold text-emerald-700 mb-2">
+            📊 Data &amp; Analytics
+          </h3>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>• Data Cleaning, EDA, Data Mining</li>
+            <li>• Statistical Analysis &amp; Hypothesis Testing</li>
+            <li>• ETL Pipelines &amp; Data Integration</li>
+            <li>• KPI Dashboards (Power BI, Tableau)</li>
+            <li>• BigQuery &amp; SQL Optimization</li>
           </ul>
         </div>
 
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="text-emerald-300 font-medium mb-2">Tools & Technologies</h3>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>Python, SQL, R</li>
-            <li>PyTorch, NumPy, Pandas</li>
-            <li>OpenCV, Scikit-learn</li>
-            <li>Git, GitHub Actions</li>
-            <li>Google Data Analytics Certification</li>
+        <!-- Tech stack with LOGOS -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm font-semibold text-emerald-700 mb-2">
+            🛠 Tech Stack
+          </h3>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+
+            <li class="flex items-center gap-2">
+              <i class="devicon-python-plain colored text-xl"></i>
+              <span>Python (Pandas, NumPy, Scikit-learn)</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <i class="devicon-pytorch-plain colored text-xl"></i>
+              <span>PyTorch (deep learning, Donut, vision models)</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <i class="devicon-mysql-plain colored text-xl"></i>
+              <span>SQL (MySQL / BigQuery)</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <i class="devicon-r-plain colored text-xl"></i>
+              <span>R (stats &amp; visualization)</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <i class="devicon-git-plain colored text-xl"></i>
+              <i class="devicon-github-original colored text-xl"></i>
+              <span>Git &amp; GitHub / GitHub Actions</span>
+            </li>
+
           </ul>
         </div>
-
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="mb-16">
-      <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> Experience
+    <!-- EXPERIENCE -->
+    <section id="experience" class="mb-12 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-5 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> Experience
       </h2>
 
-      <!-- FDS EMERGE -->
-      <div class="p-5 bg-slate-900/70 border border-slate-700 rounded-2xl mb-4">
-        <h3 class="font-semibold text-sm text-slate-100">Data Scientist – FDS Emerge (Summer Fellowship)</h3>
-        <p class="text-xs text-slate-400 mb-2">Raleigh, NC • May 2025 – Jun 2025</p>
-        <ul class="text-sm text-slate-300 space-y-1.5">
-          <li>Built generative CV systems using <span class="text-emerald-300">Donut</span> for invoice automation (10,000+ invoices).</li>
-          <li>Designed pipelines for JSON extraction, expense classification, accounting entries.</li>
-          <li>Benchmarked Donut vs LayoutLMv3 vs LLaVA achieving **95% extraction accuracy**.</li>
-          <li>Optimized training, improved efficiency on low compute hardware.</li>
-        </ul>
-      </div>
+      <div class="space-y-4">
 
-      <!-- Two Registers -->
-      <div class="p-5 bg-slate-900/70 border border-slate-700 rounded-2xl mb-4">
-        <h3 class="font-semibold text-sm text-slate-100">Data Scientist – Two Registers</h3>
-        <p class="text-xs text-slate-400 mb-2">Pune, India • Aug 2023 – Jun 2024</p>
-        <ul class="text-sm text-slate-300 space-y-1.5">
-          <li>Developed legal document summarization and data-quality prediction models.</li>
-          <li>Cleaned & validated **1M+ unstructured records**, boosting model quality.</li>
-          <li>Built Power BI dashboards; optimized SQL reducing latency by **25%**.</li>
-        </ul>
-      </div>
+        <!-- FDS Emerge -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            Data Scientist – FDS Emerge (Summer Fellowship)
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Raleigh, NC • May 2025 – Jun 2025
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Built generative computer vision models using <span class="font-medium text-emerald-700">Donut</span>
+                to automate data extraction and quality checks across <span class="font-medium">10,000+ invoices</span>,
+                improving processing efficiency by ~15%.</li>
+            <li>Designed an end-to-end pipeline for JSON extraction, expense classification,
+                and accounting-entry creation with monitoring dashboards.</li>
+            <li>Benchmarked Donut vs <span class="font-medium text-emerald-700">LayoutLMv3</span> and
+                <span class="font-medium text-emerald-700">LLaVA</span>, achieving 95%+ field-level accuracy through
+                hyperparameter tuning and enriched features.</li>
+            <li>Optimized training configurations to improve speed and GPU/CPU utilization on limited compute.</li>
+          </ul>
+        </article>
 
-      <!-- Acmegrad -->
-      <div class="p-5 bg-slate-900/70 border border-slate-700 rounded-2xl">
-        <h3 class="font-semibold text-sm text-slate-100">Data Scientist Intern – Acmegrad</h3>
-        <p class="text-xs text-slate-400 mb-2">Pune, India • Jun 2022 – Aug 2022</p>
-        <ul class="text-sm text-slate-300 space-y-1.5">
-          <li>Built forecasting models improving accuracy by **15%**.</li>
-          <li>Performed EDA on 5M+ records and engineered domain-informed features.</li>
-          <li>Used RMSE, MAPE, R² to select best production model.</li>
-        </ul>
+        <!-- Two Registers -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            Data Scientist – Two Registers
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Pune, India • Aug 2023 – Jun 2024
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Developed legal document summarization models and data-quality prediction systems,
+                reducing manual reporting time by ~40%.</li>
+            <li>Cleaned and validated <span class="font-medium">1M+ unstructured records</span>,
+                improving downstream model accuracy and reliability.</li>
+            <li>Built Power BI dashboards for operational KPIs and optimized SQL queries, cutting latency by ~25%.</li>
+          </ul>
+        </article>
+
+        <!-- Acmegrad -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            Data Scientist Intern – Acmegrad
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Pune, India • Jun 2022 – Aug 2022
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Built regression and time-series forecasting models for operational metrics,
+                improving predictive accuracy by ~15%.</li>
+            <li>Performed EDA on 5M+ records and engineered 10+ domain-informed features.</li>
+            <li>Used RMSE, MAPE, and R² to compare models and select production candidates.</li>
+          </ul>
+        </article>
+
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> Selected Projects
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-12 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-5 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> Selected Projects
       </h2>
 
       <div class="grid md:grid-cols-2 gap-5">
 
-        <!-- Project 1 -->
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="font-semibold text-sm text-slate-100">Invoice Intelligence using Donut & LayoutLMv3</h3>
-          <p class="text-xs text-slate-400 mb-2">Document AI • Generative CV • PyTorch</p>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>Built pipeline for invoice parsing & structured extraction.</li>
-            <li>Benchmarked Donut vs LayoutLMv3 vs LLaVA on 10k+ invoices.</li>
-            <li>Achieved **95% field-level accuracy** through tuning.</li>
+        <!-- Donut project -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            Invoice Intelligence with Donut &amp; LayoutLMv3
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Document AI · Generative CV · PyTorch
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Built a document understanding pipeline using
+                <span class="font-medium text-emerald-700">Donut</span> to parse complex invoices
+                and extract structured entities.</li>
+            <li>Benchmarked Donut, LayoutLMv3, and LLaVA on 10k+ invoices, reaching 95%+ field-level accuracy.</li>
+            <li>Added expense classification and automated accounting entry generation
+                to enable invoice-to-ledger automation.</li>
           </ul>
-        </div>
+        </article>
 
-        <!-- Project 2 -->
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="font-semibold text-sm text-slate-100">Federated Learning with Differential Privacy</h3>
-          <p class="text-xs text-slate-400 mb-2">Flower • PyTorch • MLOps</p>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>Implemented FL pipeline over **200M+ clinical rows**.</li>
-            <li>Added DP-SGD improving privacy by **20%**.</li>
-            <li>Automated ETL with GitHub Actions & Bash (-35% time).</li>
+        <!-- Federated Learning project -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            Differential Privacy Using Federated Learning
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Flower · PyTorch · MLOps
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Implemented a federated learning pipeline over 200M+ multimodal clinical records without
+                centralizing data.</li>
+            <li>Automated ETL and preprocessing with GitHub Actions &amp; Bash, reducing processing time by ~35%.</li>
+            <li>Applied DP-SGD to improve privacy guarantees by ~20% with less than 5% accuracy drop.</li>
           </ul>
-        </div>
+        </article>
 
-        <!-- Project 3 -->
-        <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-700">
-          <h3 class="font-semibold text-sm text-slate-100">2-Way Hand Sign Talk System</h3>
-          <p class="text-xs text-slate-400 mb-2">CNN • Computer Vision • Accessibility</p>
-          <ul class="text-sm text-slate-300 space-y-1">
-            <li>CNN-based gesture recognition with **97% accuracy**.</li>
-            <li>Designed for accessibility and real-time use.</li>
+        <!-- Hand Sign project -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <h3 class="text-sm sm:text-base font-semibold">
+            2-Way Hand Sign Talk System
+          </h3>
+          <p class="text-[11px] sm:text-xs text-slate-500 mb-2">
+            Computer Vision · Deep Learning · Accessibility
+          </p>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
+            <li>Developed a CNN-based real-time hand-gesture recognition system using OpenCV.</li>
+            <li>Achieved ~97% classification accuracy on sign gestures.</li>
+            <li>Showcased potential for scaling to assist millions of hearing-impaired users.</li>
           </ul>
-        </div>
+        </article>
+
+        <!-- Placeholder card -->
+        <article class="bg-slate-100 border border-dashed border-slate-300 rounded-2xl p-4">
+          <h3 class="text-sm sm:text-base font-semibold text-slate-800 mb-1">
+            More projects coming soon
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600">
+            I’m actively building new forecasting, analytics, and ML experimentation projects.
+            As I open-source them on GitHub, I’ll link them here.
+          </p>
+        </article>
 
       </div>
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="mb-16">
-      <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> Education
+    <section id="education" class="mb-12 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-5 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> Education
       </h2>
 
-      <div class="space-y-4">
-        <div class="p-5 bg-slate-900/70 border border-slate-700 rounded-2xl">
-          <p class="font-semibold text-sm">North Carolina State University – Raleigh, NC</p>
-          <p class="text-xs text-slate-400">M.S. in Foundations of Data Science • Aug 2024 – May 2026</p>
+      <div class="space-y-3 text-sm sm:text-base">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <p class="font-semibold">North Carolina State University – Raleigh, NC</p>
+          <p class="text-xs sm:text-sm text-slate-600">
+            M.S. in Foundations of Data Science • Aug 2024 – May 2026 (expected)
+          </p>
         </div>
 
-        <div class="p-5 bg-slate-900/70 border border-slate-700 rounded-2xl">
-          <p class="font-semibold text-sm">Savitribai Phule Pune University – Pune, India</p>
-          <p class="text-xs text-slate-400">B.Tech in Artificial Intelligence & Data Science • 2020 – 2024</p>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <p class="font-semibold">Savitribai Phule Pune University – Pune, India</p>
+          <p class="text-xs sm:text-sm text-slate-600">
+            B.Tech in Artificial Intelligence &amp; Data Science • 2020 – 2024
+          </p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="mb-20">
-      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
-        <span class="w-2 h-6 bg-emerald-400 rounded-full"></span> Contact
+    <section id="contact" class="mb-10 sm:mb-14">
+      <h2 class="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+        <span class="w-1.5 h-5 rounded-full bg-emerald-500"></span> Contact
       </h2>
 
-      <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-700">
-        <p class="text-sm text-slate-200 mb-3">
-          I'm actively seeking <span class="text-emerald-300">Data Scientist, ML Engineer, and Data Analyst</span> roles.
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+        <p class="text-sm sm:text-base text-slate-700 mb-3">
+          I’m actively exploring opportunities as a
+          <span class="font-semibold text-emerald-700">
+            Data Scientist, Machine Learning Engineer, or Data Analyst.
+          </span>
+          Feel free to reach out for roles, collaborations, or ML-focused projects.
         </p>
-
-        <ul class="space-y-2 text-sm">
+        <ul class="space-y-1.5 text-sm sm:text-base text-slate-700">
           <li>📍 Raleigh, NC (Open to relocate)</li>
           <li>📧 Email:
-            <a href="mailto:sagulhan@ncsu.edu" class="text-emerald-300 underline">sagulhan@ncsu.edu</a>
+            <a href="mailto:sagulhan@ncsu.edu" class="text-emerald-700 underline">
+              sagulhan@ncsu.edu
+            </a>
           </li>
           <li>🔗 LinkedIn:
-            <a href="https://www.linkedin.com/in/shrawanigulhane" class="text-emerald-300 underline">linkedin.com/in/shrawanigulhane</a>
+            <a href="https://www.linkedin.com/in/shrawanigulhane"
+               target="_blank" rel="noopener noreferrer"
+               class="text-emerald-700 underline">
+              linkedin.com/in/shrawanigulhane
+            </a>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-xs text-slate-500 border-t border-slate-800 pt-4 text-center">
-      © <span id="year"></span> Shrawani Gulhane — Built with HTML & TailwindCSS, Hosted on GitHub Pages
+    <footer class="border-t border-slate-200 pt-3 mt-4 text-[11px] sm:text-xs text-slate-500 flex flex-wrap justify-between gap-2">
+      <span>© <span id="year"></span> Shrawani Gulhane</span>
+      <span>Built with HTML &amp; Tailwind · Hosted on GitHub Pages</span>
     </footer>
 
   </div>
@@ -256,6 +406,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
