@@ -418,59 +418,51 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const body = document.getElementById("body")
 const toggle = document.getElementById("themeToggle")
-const circle = document.getElementById("toggleCircle")
 
-function setDark(){
+function enableDark(){
 
 body.classList.remove("bg-slate-50","text-slate-900")
 body.classList.add("bg-slate-900","text-slate-100")
 
-circle.style.transform = "translateX(20px)"
-
 localStorage.setItem("theme","dark")
+toggle.checked = true
 
 }
 
-function setLight(){
+function enableLight(){
 
 body.classList.remove("bg-slate-900","text-slate-100")
 body.classList.add("bg-slate-50","text-slate-900")
 
-circle.style.transform = "translateX(0px)"
-
 localStorage.setItem("theme","light")
+toggle.checked = false
 
 }
 
-function toggleTheme(){
+toggle.addEventListener("change", function(){
 
 if(toggle.checked){
-setDark()
+enableDark()
 }else{
-setLight()
+enableLight()
 }
 
-}
+})
 
 function loadTheme(){
 
 const savedTheme = localStorage.getItem("theme")
 
 if(savedTheme === "dark"){
-toggle.checked = true
-setDark()
+enableDark()
 }
-
 else if(savedTheme === "light"){
-toggle.checked = false
-setLight()
+enableLight()
 }
-
 else{
 
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-toggle.checked = true
-setDark()
+enableDark()
 }
 
 }
