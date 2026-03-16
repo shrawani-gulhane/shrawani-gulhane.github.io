@@ -33,14 +33,22 @@
         </div>
       </div>
 
-      <nav class="hidden md:flex gap-5 text-xs sm:text-sm text-slate-600">
-        <a href="#about" class="hover:text-emerald-600">About</a>
-        <a href="#skills" class="hover:text-emerald-600">Skills</a>
-        <a href="#experience" class="hover:text-emerald-600">Experience</a>
-        <a href="#projects" class="hover:text-emerald-600">Projects</a>
-        <a href="#education" class="hover:text-emerald-600">Education</a>
-        <a href="#contact" class="hover:text-emerald-600">Contact</a>
-      </nav>
+      <label class="flex items-center ml-4 cursor-pointer">
+
+<input type="checkbox" id="themeToggle" class="hidden" onchange="toggleTheme()">
+
+<div class="relative w-14 h-7 bg-slate-300 rounded-full flex items-center transition">
+
+<span class="absolute left-2 text-xs">☀️</span>
+<span class="absolute right-2 text-xs">🌙</span>
+
+<div id="toggleCircle"
+class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300">
+</div>
+
+</div>
+
+</label>
       <label class="flex items-center cursor-pointer ml-4">
 
 <span class="mr-2 text-lg">☀️</span>
@@ -434,7 +442,7 @@ function setDark(){
 body.classList.remove("bg-slate-50","text-slate-900")
 body.classList.add("bg-slate-900","text-slate-100")
 
-circle.style.transform = "translateX(24px)"
+circle.style.transform = "translateX(28px)"
 
 localStorage.setItem("theme","dark")
 
