@@ -41,14 +41,23 @@
         <a href="#education" class="hover:text-emerald-600">Education</a>
         <a href="#contact" class="hover:text-emerald-600">Contact</a>
       </nav>
-      <label class="relative inline-flex items-center cursor-pointer ml-4">
-  <input type="checkbox" id="themeToggle" class="sr-only" onchange="toggleTheme()">
+      <label class="flex items-center cursor-pointer ml-4">
 
-  <div class="w-11 h-6 bg-slate-300 rounded-full transition"></div>
+<span class="mr-2 text-lg">☀️</span>
 
-  <div id="toggleCircle"
-       class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform">
-  </div>
+<div class="relative">
+<input type="checkbox" id="themeToggle" class="sr-only" onchange="toggleTheme()">
+
+<div class="w-12 h-6 bg-slate-300 rounded-full shadow-inner"></div>
+
+<div id="toggleCircle"
+class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform duration-300">
+</div>
+
+</div>
+
+<span class="ml-2 text-lg">🌙</span>
+
 </label>
     </header>
 
@@ -418,51 +427,59 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const body = document.getElementById("body")
 const toggle = document.getElementById("themeToggle")
+const circle = document.getElementById("toggleCircle")
 
-function enableDark(){
+function setDark(){
 
 body.classList.remove("bg-slate-50","text-slate-900")
 body.classList.add("bg-slate-900","text-slate-100")
 
+circle.style.transform = "translateX(24px)"
+
 localStorage.setItem("theme","dark")
-toggle.checked = true
 
 }
 
-function enableLight(){
+function setLight(){
 
 body.classList.remove("bg-slate-900","text-slate-100")
 body.classList.add("bg-slate-50","text-slate-900")
 
+circle.style.transform = "translateX(0px)"
+
 localStorage.setItem("theme","light")
-toggle.checked = false
 
 }
 
-toggle.addEventListener("change", function(){
+function toggleTheme(){
 
 if(toggle.checked){
-enableDark()
+setDark()
 }else{
-enableLight()
+setLight()
 }
 
-})
+}
 
 function loadTheme(){
 
 const savedTheme = localStorage.getItem("theme")
 
 if(savedTheme === "dark"){
-enableDark()
+toggle.checked = true
+setDark()
 }
+
 else if(savedTheme === "light"){
-enableLight()
+toggle.checked = false
+setLight()
 }
+
 else{
 
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-enableDark()
+toggle.checked = true
+setDark()
 }
 
 }
