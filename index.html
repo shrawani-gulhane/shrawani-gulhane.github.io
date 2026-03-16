@@ -408,7 +408,25 @@ class="ml-4 px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white hove
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function toggleTheme() {
+
+const body = document.getElementById("body")
+
+if(body.classList.contains("bg-slate-50")){
+
+body.classList.remove("bg-slate-50","text-slate-900")
+body.classList.add("bg-slate-900","text-slate-100")
+
+}else{
+
+body.classList.remove("bg-slate-900","text-slate-100")
+body.classList.add("bg-slate-50","text-slate-900")
+
+}
+
+}
+</script>
 </body>
 </html>
