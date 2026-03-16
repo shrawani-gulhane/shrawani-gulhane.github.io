@@ -41,10 +41,15 @@
         <a href="#education" class="hover:text-emerald-600">Education</a>
         <a href="#contact" class="hover:text-emerald-600">Contact</a>
       </nav>
-      <button onclick="toggleTheme()" 
-class="ml-4 px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white hover:bg-slate-100">
-🌙 / ☀️
-</button>
+      <label class="relative inline-flex items-center cursor-pointer ml-4">
+  <input type="checkbox" id="themeToggle" class="sr-only" onchange="toggleTheme()">
+
+  <div class="w-11 h-6 bg-slate-300 rounded-full transition"></div>
+
+  <div id="toggleCircle"
+       class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform">
+  </div>
+</label>
     </header>
 
     <!-- HERO -->
@@ -408,25 +413,72 @@ class="ml-4 px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white hove
   </div>
 
   <script>
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
-function toggleTheme() {
-
 const body = document.getElementById("body")
+const toggle = document.getElementById("themeToggle")
+const circle = document.getElementById("toggleCircle")
 
-if(body.classList.contains("bg-slate-50")){
+function setDark(){
 
 body.classList.remove("bg-slate-50","text-slate-900")
 body.classList.add("bg-slate-900","text-slate-100")
 
-}else{
+circle.style.transform = "translateX(20px)"
+
+localStorage.setItem("theme","dark")
+
+}
+
+function setLight(){
 
 body.classList.remove("bg-slate-900","text-slate-100")
 body.classList.add("bg-slate-50","text-slate-900")
 
+circle.style.transform = "translateX(0px)"
+
+localStorage.setItem("theme","light")
+
+}
+
+function toggleTheme(){
+
+if(toggle.checked){
+setDark()
+}else{
+setLight()
 }
 
 }
+
+function loadTheme(){
+
+const savedTheme = localStorage.getItem("theme")
+
+if(savedTheme === "dark"){
+toggle.checked = true
+setDark()
+}
+
+else if(savedTheme === "light"){
+toggle.checked = false
+setLight()
+}
+
+else{
+
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+toggle.checked = true
+setDark()
+}
+
+}
+
+}
+
+loadTheme()
+
 </script>
 </body>
 </html>
