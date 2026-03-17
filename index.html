@@ -19,7 +19,16 @@
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-4 py-6 sm:py-10">
 
     <!-- HEADER -->
-    <header class="flex justify-end items-center mb-8 sm:mb-10">
+    <header class="flex items-center justify-between mb-8 sm:mb-10">
+      <nav class="flex flex-wrap gap-4 text-sm text-slate-600 font-medium">
+        <a href="#about" class="hover:text-emerald-700 transition">About</a>
+        <a href="#skills" class="hover:text-emerald-700 transition">Skills</a>
+        <a href="#experience" class="hover:text-emerald-700 transition">Experience</a>
+        <a href="#projects" class="hover:text-emerald-700 transition">Projects</a>
+        <a href="#education" class="hover:text-emerald-700 transition">Education</a>
+        <a href="#contact" class="hover:text-emerald-700 transition">Contact</a>
+      </nav>
+
       <label class="flex items-center ml-4 cursor-pointer">
         <input type="checkbox" id="themeToggle" class="hidden" onchange="toggleTheme()">
 
@@ -56,33 +65,6 @@
           I specialize in Document AI (Donut, LayoutLMv3, LLaVA), forecasting,
           and model optimization.
         </p>
-      </div>
-
-      <!-- DATA METRICS -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10 mb-6 text-center text-[11px] sm:text-xs">
-        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
-          <p class="font-semibold text-emerald-700 text-sm sm:text-base">10K+</p>
-          <p class="text-slate-500">Invoices parsed</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
-          <p class="font-semibold text-emerald-700 text-sm sm:text-base">200M+</p>
-          <p class="text-slate-500">Clinical rows in FL</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
-          <p class="font-semibold text-emerald-700 text-sm sm:text-base">97%</p>
-          <p class="text-slate-500">CV accuracy</p>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="#contact"
-           class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition">
-          Contact Me
-        </a>
-        <a href="#projects"
-           class="px-5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-sm text-emerald-800 hover:border-emerald-400 transition">
-          View Projects
-        </a>
       </div>
     </section>
 
