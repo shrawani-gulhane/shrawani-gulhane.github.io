@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shrawani Gulhane | Data Science Portfolio</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Devicon for tech logos -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 
@@ -16,132 +14,75 @@
         content="Portfolio of Shrawani Gulhane – Data Scientist & ML Engineer focused on Generative AI, Computer Vision, Federated Learning, and Analytics." />
 </head>
 
-<body class="bg-slate-50 text-slate-900 transition-colors duration-300" id="body">
+<body id="body" class="bg-slate-50 text-slate-900 transition-colors duration-300">
 
-  <!-- PAGE WRAPPER -->
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-4 py-6 sm:py-10">
 
-    <!-- NAVBAR -->
-    <header class="flex items-center justify-between mb-8 sm:mb-10">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 flex items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold">
-          SG
-        </div>
-        <div>
-          <p class="font-semibold text-sm sm:text-base">Shrawani Gulhane</p>
-          <p class="text-xs text-slate-500">Data Science @ NC State</p>
-        </div>
-      </div>
-
+    <!-- HEADER -->
+    <header class="flex justify-end items-center mb-8 sm:mb-10">
       <label class="flex items-center ml-4 cursor-pointer">
+        <input type="checkbox" id="themeToggle" class="hidden" onchange="toggleTheme()">
 
-<input type="checkbox" id="themeToggle" class="hidden" onchange="toggleTheme()">
+        <div class="relative w-14 h-7 bg-slate-300 rounded-full flex items-center transition">
+          <span class="absolute left-2 text-xs">☀️</span>
+          <span class="absolute right-2 text-xs">🌙</span>
 
-<div class="relative w-14 h-7 bg-slate-300 rounded-full flex items-center transition">
-
-<span class="absolute left-2 text-xs">☀️</span>
-<span class="absolute right-2 text-xs">🌙</span>
-
-<div id="toggleCircle"
-class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300">
-</div>
-
-</div>
-
-</label>
-      <label class="flex items-center cursor-pointer ml-4">
-
-<span class="mr-2 text-lg">☀️</span>
-
-<div class="relative">
-<input type="checkbox" id="themeToggle" class="sr-only" onchange="toggleTheme()">
-
-<div class="w-12 h-6 bg-slate-300 rounded-full shadow-inner"></div>
-
-<div id="toggleCircle"
-class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform duration-300">
-</div>
-
-</div>
-
-<span class="ml-2 text-lg">🌙</span>
-
-</label>
+          <div id="toggleCircle"
+               class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300">
+          </div>
+        </div>
+      </label>
     </header>
 
     <!-- HERO -->
-    <section class="text-center py-20">
+    <section class="text-center py-16 sm:py-20">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-wide mb-4">
+        SHRAWANI GULHANE
+      </h1>
 
-<h1 class="text-4xl md:text-6xl font-bold tracking-wide mb-4">
-SHRAWANI GULHANE
-</h1>
+      <p class="text-sm md:text-lg text-slate-600 tracking-wide mb-6">
+        Data Science • Machine Learning • Generative AI • Analytics
+      </p>
 
-<p class="text-sm md:text-lg text-slate-600 tracking-wide mb-6">
-Data Science • Machine Learning • Generative AI • Analytics
-</p>
+      <div class="max-w-3xl mx-auto text-slate-700 text-base md:text-lg leading-relaxed">
+        <p class="mb-4 font-medium text-slate-900">
+          Turning messy data into decision-ready insight.
+        </p>
 
-<div class="max-w-3xl mx-auto text-slate-700 text-base md:text-lg leading-relaxed">
+        <p>
+          I’m a Data Science graduate student at
+          <strong>North Carolina State University</strong>, building end-to-end systems in
+          generative computer vision, federated learning, and large-scale analytics.
+          I specialize in Document AI (Donut, LayoutLMv3, LLaVA), forecasting,
+          and model optimization.
+        </p>
+      </div>
 
-<p class="mb-4 font-medium text-slate-900">
-Turning messy data into decision-ready insight.
-</p>
-
-<p>
-I’m a Data Science graduate student at
-<strong>North Carolina State University</strong>, building end-to-end systems in
-generative computer vision, federated learning, and large-scale analytics.
-I specialize in Document AI (Donut, LayoutLMv3, LLaVA), forecasting,
-and model optimization.
-</p>
-
-</div>
-
-
-          <!-- data metrics -->
-          <div class="grid grid-cols-3 gap-3 mb-5 text-center text-[11px] sm:text-xs">
-            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
-              <p class="font-semibold text-emerald-700 text-sm sm:text-base">10k+</p>
-              <p class="text-slate-500">Invoices parsed</p>
-            </div>
-            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
-              <p class="font-semibold text-emerald-700 text-sm sm:text-base">200M+</p>
-              <p class="text-slate-500">Clinical rows in FL</p>
-            </div>
-            <div class="bg-white border border-slate-200 rounded-xl px-3 py-2 shadow-sm">
-              <p class="font-semibold text-emerald-700 text-sm sm:text-base">97%</p>
-              <p class="text-slate-500">CV accuracy</p>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-3">
-            <a href="#contact"
-               class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition">
-              Contact Me
-            </a>
-            <a href="#projects"
-               class="px-5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-sm text-emerald-800 hover:border-emerald-400 transition">
-              View Projects
-            </a>
-          </div>
+      <!-- DATA METRICS -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10 mb-6 text-center text-[11px] sm:text-xs">
+        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
+          <p class="font-semibold text-emerald-700 text-sm sm:text-base">10K+</p>
+          <p class="text-slate-500">Invoices parsed</p>
         </div>
-
-        <!-- simple “data card” panel -->
-        <div class="md:justify-self-end">
-          <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm">
-            <p class="text-xs font-semibold text-emerald-700 mb-2 uppercase tracking-wide">
-              Currently seeking
-            </p>
-            <ul class="space-y-1 text-xs sm:text-sm text-slate-700 mb-3">
-              <li>• Data Scientist (Entry-level / New Grad)</li>
-              <li>• Machine Learning Engineer</li>
-              <li>• Data / Analytics Engineer</li>
-            </ul>
-            <div class="border-t border-slate-200 pt-3 text-[11px] sm:text-xs text-slate-600">
-              <p>📍 Raleigh, NC — Open to relocate</p>
-              <p>🎓 F-1 visa student, targeting H-1B-friendly roles</p>
-            </div>
-          </div>
+        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
+          <p class="font-semibold text-emerald-700 text-sm sm:text-base">200M+</p>
+          <p class="text-slate-500">Clinical rows in FL</p>
         </div>
+        <div class="bg-white border border-slate-200 rounded-xl px-3 py-4 shadow-sm">
+          <p class="font-semibold text-emerald-700 text-sm sm:text-base">97%</p>
+          <p class="text-slate-500">CV accuracy</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#contact"
+           class="px-5 py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition">
+          Contact Me
+        </a>
+        <a href="#projects"
+           class="px-5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-sm text-emerald-800 hover:border-emerald-400 transition">
+          View Projects
+        </a>
       </div>
     </section>
 
@@ -154,8 +95,8 @@ and model optimization.
         I’m a Data Scientist and graduate student in the
         <span class="font-semibold">Foundations of Data Science</span> program at NC State.
         My background combines a <span class="font-semibold">B.Tech in Artificial Intelligence &amp; Data Science</span>
-        with hands-on industry experience across **invoice automation, legal document summarization,
-        forecasting, and analytics engineering**.
+        with hands-on industry experience across invoice automation, legal document summarization,
+        forecasting, and analytics engineering.
       </p>
       <p class="text-sm sm:text-base text-slate-700 leading-relaxed mt-3">
         I enjoy owning the full lifecycle: from cleaning and structuring data, to modeling,
@@ -173,7 +114,6 @@ and model optimization.
 
       <div class="grid md:grid-cols-3 gap-5">
 
-        <!-- ML / AI -->
         <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm font-semibold text-emerald-700 mb-2">
             🧠 Machine Learning &amp; AI
@@ -187,7 +127,6 @@ and model optimization.
           </ul>
         </div>
 
-        <!-- Data / Analytics -->
         <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm font-semibold text-emerald-700 mb-2">
             📊 Data &amp; Analytics
@@ -201,39 +140,32 @@ and model optimization.
           </ul>
         </div>
 
-        <!-- Tech stack with LOGOS -->
         <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm font-semibold text-emerald-700 mb-2">
             🛠 Tech Stack
           </h3>
           <ul class="text-xs sm:text-sm text-slate-700 space-y-1.5">
-
             <li class="flex items-center gap-2">
               <i class="devicon-python-plain colored text-xl"></i>
               <span>Python (Pandas, NumPy, Scikit-learn)</span>
             </li>
-
             <li class="flex items-center gap-2">
               <i class="devicon-pytorch-plain colored text-xl"></i>
               <span>PyTorch (deep learning, Donut, vision models)</span>
             </li>
-
             <li class="flex items-center gap-2">
               <i class="devicon-mysql-plain colored text-xl"></i>
               <span>SQL (MySQL / BigQuery)</span>
             </li>
-
             <li class="flex items-center gap-2">
               <i class="devicon-r-plain colored text-xl"></i>
               <span>R (stats &amp; visualization)</span>
             </li>
-
             <li class="flex items-center gap-2">
               <i class="devicon-git-plain colored text-xl"></i>
               <i class="devicon-github-original colored text-xl"></i>
               <span>Git &amp; GitHub / GitHub Actions</span>
             </li>
-
           </ul>
         </div>
       </div>
@@ -246,8 +178,6 @@ and model optimization.
       </h2>
 
       <div class="space-y-4">
-
-        <!-- FDS Emerge -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             Data Scientist – FDS Emerge (Summer Fellowship)
@@ -268,7 +198,6 @@ and model optimization.
           </ul>
         </article>
 
-        <!-- Two Registers -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             Data Scientist – Two Registers
@@ -285,7 +214,6 @@ and model optimization.
           </ul>
         </article>
 
-        <!-- Acmegrad -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             Data Scientist Intern – Acmegrad
@@ -300,7 +228,6 @@ and model optimization.
             <li>Used RMSE, MAPE, and R² to compare models and select production candidates.</li>
           </ul>
         </article>
-
       </div>
     </section>
 
@@ -311,8 +238,6 @@ and model optimization.
       </h2>
 
       <div class="grid md:grid-cols-2 gap-5">
-
-        <!-- Donut project -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             Invoice Intelligence with Donut &amp; LayoutLMv3
@@ -330,7 +255,6 @@ and model optimization.
           </ul>
         </article>
 
-        <!-- Federated Learning project -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             Differential Privacy Using Federated Learning
@@ -346,7 +270,6 @@ and model optimization.
           </ul>
         </article>
 
-        <!-- Hand Sign project -->
         <article class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
           <h3 class="text-sm sm:text-base font-semibold">
             2-Way Hand Sign Talk System
@@ -361,7 +284,6 @@ and model optimization.
           </ul>
         </article>
 
-        <!-- Placeholder card -->
         <article class="bg-slate-100 border border-dashed border-slate-300 rounded-2xl p-4">
           <h3 class="text-sm sm:text-base font-semibold text-slate-800 mb-1">
             More projects coming soon
@@ -371,7 +293,6 @@ and model optimization.
             As I open-source them on GitHub, I’ll link them here.
           </p>
         </article>
-
       </div>
     </section>
 
@@ -439,72 +360,50 @@ and model optimization.
   </div>
 
   <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-document.getElementById("year").textContent = new Date().getFullYear();
+    const body = document.getElementById("body");
+    const toggle = document.getElementById("themeToggle");
+    const circle = document.getElementById("toggleCircle");
 
-const body = document.getElementById("body")
-const toggle = document.getElementById("themeToggle")
-const circle = document.getElementById("toggleCircle")
+    function setDark() {
+      body.classList.remove("bg-slate-50", "text-slate-900");
+      body.classList.add("bg-slate-900", "text-slate-100");
+      circle.style.transform = "translateX(28px)";
+      localStorage.setItem("theme", "dark");
+    }
 
-function setDark(){
+    function setLight() {
+      body.classList.remove("bg-slate-900", "text-slate-100");
+      body.classList.add("bg-slate-50", "text-slate-900");
+      circle.style.transform = "translateX(0px)";
+      localStorage.setItem("theme", "light");
+    }
 
-body.classList.remove("bg-slate-50","text-slate-900")
-body.classList.add("bg-slate-900","text-slate-100")
+    function toggleTheme() {
+      if (toggle.checked) {
+        setDark();
+      } else {
+        setLight();
+      }
+    }
 
-circle.style.transform = "translateX(28px)"
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme");
 
-localStorage.setItem("theme","dark")
+      if (savedTheme === "dark") {
+        toggle.checked = true;
+        setDark();
+      } else if (savedTheme === "light") {
+        toggle.checked = false;
+        setLight();
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggle.checked = true;
+        setDark();
+      }
+    }
 
-}
-
-function setLight(){
-
-body.classList.remove("bg-slate-900","text-slate-100")
-body.classList.add("bg-slate-50","text-slate-900")
-
-circle.style.transform = "translateX(0px)"
-
-localStorage.setItem("theme","light")
-
-}
-
-function toggleTheme(){
-
-if(toggle.checked){
-setDark()
-}else{
-setLight()
-}
-
-}
-
-function loadTheme(){
-
-const savedTheme = localStorage.getItem("theme")
-
-if(savedTheme === "dark"){
-toggle.checked = true
-setDark()
-}
-
-else if(savedTheme === "light"){
-toggle.checked = false
-setLight()
-}
-
-else{
-
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-toggle.checked = true
-setDark()
-}
-
-}
-
-}
-
-loadTheme()
-
-</script>
+    loadTheme();
+  </script>
 </body>
 </html>
