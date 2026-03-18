@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shrawani Gulhane | Data Science Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-
 <style>
 html { scroll-behavior: smooth; }
 
+/* NAV */
 .nav-link {
   position: relative;
   color: #475569;
-  transition: all 0.3s ease;
-  padding-bottom: 4px;
+  transition: 0.3s;
 }
-
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 0;
+  bottom: -4px;
+  width: 0%;
   height: 2px;
-  background: #059669;
-  transition: width 0.3s ease;
+  background: #10b981;
+  transition: 0.3s;
 }
-
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
 }
+.nav-link:hover { color: #10b981; }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #059669;
+/* DARK MODE */
+.dark {
+  background: #020617;
+  color: #e2e8f0;
 }
-
+.dark .card {
+  background: #0f172a;
+  border: 1px solid #334155;
+}
 .dark .nav-link {
   color: #cbd5e1;
 }
-
-.dark .nav-link:hover,
-.dark .nav-link.active {
+.dark .nav-link:hover {
   color: #34d399;
-  text-shadow: 0 0 8px rgba(52,211,153,0.6);
-}
-
-.dark .nav-link::after {
-  background: #34d399;
-}
-
-.dark-header {
-  background: rgba(2,6,23,0.7);
-  backdrop-filter: blur(10px);
+  text-shadow: 0 0 6px rgba(52,211,153,0.6);
 }
 </style>
 </head>
 
-<body id="body" class="bg-slate-50 text-slate-900 transition duration-300">
+<body id="body" class="bg-slate-50 text-slate-900 transition">
 
-<div class="max-w-5xl mx-auto px-4 py-6">
+<div class="max-w-6xl mx-auto px-6 py-6">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/70 dark-header mb-10">
-<div class="flex justify-between items-center py-4">
-
-<nav class="flex gap-5 text-sm font-medium">
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 flex justify-between items-center mb-10">
+<nav class="flex gap-6 text-sm font-medium">
 <a href="#about" class="nav-link">About</a>
 <a href="#skills" class="nav-link">Skills</a>
 <a href="#experience" class="nav-link">Experience</a>
@@ -79,30 +66,16 @@ html { scroll-behavior: smooth; }
 <a href="#contact" class="nav-link">Contact</a>
 </nav>
 
-<label class="cursor-pointer">
-<input type="checkbox" id="themeToggle" class="hidden" onchange="toggleTheme()">
-
-<div class="relative w-14 h-7 bg-slate-300 rounded-full flex items-center">
-<span class="absolute left-2 text-xs">☀️</span>
-<span class="absolute right-2 text-xs">🌙</span>
-
-<div id="toggleCircle"
-class="absolute left-1 w-5 h-5 bg-white rounded-full shadow-md transition duration-300">
-</div>
-</div>
-</label>
-
-</div>
+<button onclick="toggleTheme()" class="px-3 py-1 border rounded-lg text-sm">
+🌙
+</button>
 </header>
 
 <!-- HERO -->
 <section class="text-center py-16">
+<h1 class="text-5xl font-bold mb-4">SHRAWANI GULHANE</h1>
 
-<h1 class="text-4xl md:text-6xl font-bold mb-4">
-SHRAWANI GULHANE
-</h1>
-
-<p class="text-lg text-slate-600 mb-6">
+<p class="text-lg text-slate-500 mb-6">
 Data Science • Machine Learning • Generative AI • Analytics
 </p>
 
@@ -110,168 +83,112 @@ Data Science • Machine Learning • Generative AI • Analytics
 Turning messy data into decision-ready insight.
 </p>
 
-<p class="max-w-3xl mx-auto text-slate-700">
-I’m a Data Science graduate student at <strong>North Carolina State University</strong>,
-building end-to-end systems in generative computer vision, federated learning,
-and large-scale analytics. I specialize in Document AI (Donut, LayoutLMv3, LLaVA),
-forecasting, and model optimization.
+<p class="max-w-3xl mx-auto text-slate-600">
+Data Science graduate student at <b>NC State University</b> with strong experience in 
+ETL pipelines, large-scale data processing, and ML systems. Specialized in 
+Document AI, federated learning, and scalable analytics solutions.
 </p>
 
-<!-- LINKS -->
-<div class="mt-8 flex justify-center gap-4 flex-wrap">
-
-<a href="https://www.linkedin.com/in/shrawanigulhane/"
-target="_blank"
-class="px-5 py-2 rounded-xl border bg-white hover:bg-slate-100">
-LinkedIn
-</a>
-
-<a href="https://github.com/shrawani-gulhane"
-target="_blank"
-class="px-5 py-2 rounded-xl border bg-white hover:bg-slate-100">
-GitHub
-</a>
-
-<a href="#"
-class="px-5 py-2 rounded-xl border bg-white hover:bg-slate-100">
-Resume
-</a>
-
+<div class="mt-8 flex justify-center gap-4">
+<a href="https://www.linkedin.com/in/shrawanigulhane/" target="_blank" class="px-5 py-2 border rounded-lg">LinkedIn</a>
+<a href="https://github.com/shrawani-gulhane" target="_blank" class="px-5 py-2 border rounded-lg">GitHub</a>
 </div>
-
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="mb-12">
+<section id="about" class="mb-14">
 <h2 class="text-xl font-semibold mb-3">About</h2>
-<p>
-Data Science graduate student with strong experience in ETL pipelines,
-machine learning systems, and large-scale analytics.
+<p class="text-slate-600">
+Master’s student in Foundations of Data Science with hands-on experience in building 
+end-to-end ML and data engineering pipelines. Worked with 1M+ records, ETL systems, 
+and predictive modeling improving accuracy up to 22%.
 </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="mb-12">
+<section id="skills" class="mb-14">
 <h2 class="text-xl font-semibold mb-5">Skills</h2>
 
-<div class="grid md:grid-cols-3 gap-5">
+<div class="grid md:grid-cols-3 gap-6">
 
-<div class="bg-white p-4 rounded-xl shadow">
-<h3 class="font-semibold mb-2">ML & AI</h3>
-<p class="text-sm">Regression, CNNs, Forecasting, LLMs</p>
+<div class="card p-5 rounded-xl shadow">
+<h3 class="font-semibold mb-2">Machine Learning</h3>
+<p class="text-sm">Regression, Classification, Forecasting, CNNs, LLMs</p>
 </div>
 
-<div class="bg-white p-4 rounded-xl shadow">
-<h3 class="font-semibold mb-2">Data</h3>
-<p class="text-sm">SQL, ETL, Dashboards, Analytics</p>
+<div class="card p-5 rounded-xl shadow">
+<h3 class="font-semibold mb-2">Data Engineering</h3>
+<p class="text-sm">ETL Pipelines, Data Modeling, Distributed Systems</p>
 </div>
 
-<div class="bg-white p-4 rounded-xl shadow">
-<h3 class="font-semibold mb-2">Tech</h3>
-<p class="text-sm">Python, PyTorch, AWS, Docker</p>
+<div class="card p-5 rounded-xl shadow">
+<h3 class="font-semibold mb-2">Tech Stack</h3>
+<p class="text-sm">Python, SQL, PySpark, AWS, Docker</p>
 </div>
 
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="mb-12">
+<section id="experience" class="mb-14">
 <h2 class="text-xl font-semibold mb-5">Experience</h2>
 
-<div class="bg-white p-4 rounded-xl shadow mb-4">
-<p class="font-semibold">Data Science Intern – NCSU</p>
+<div class="card p-5 rounded-xl shadow mb-4">
+<h3 class="font-semibold">Data Science Intern – NCSU</h3>
 <p class="text-sm text-slate-500">2025</p>
+<p class="text-sm mt-2">
+Built ETL pipelines and ML models on 50K+ records improving accuracy by 22%.
+</p>
 </div>
 
-<div class="bg-white p-4 rounded-xl shadow">
-<p class="font-semibold">Data Scientist – Two Registers</p>
+<div class="card p-5 rounded-xl shadow">
+<h3 class="font-semibold">Data Scientist – Two Registers</h3>
 <p class="text-sm text-slate-500">2023–2024</p>
+<p class="text-sm mt-2">
+Processed 1M+ records and improved reporting efficiency by 35%.
+</p>
 </div>
 
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="mb-12">
+<section id="projects" class="mb-14">
 <h2 class="text-xl font-semibold mb-5">Projects</h2>
 
-<div class="grid md:grid-cols-2 gap-5">
-<div class="bg-white p-4 rounded-xl shadow">
-<p class="font-semibold">Invoice AI System</p>
-</div>
+<div class="grid md:grid-cols-2 gap-6">
 
-<div class="bg-white p-4 rounded-xl shadow">
-<p class="font-semibold">Federated Learning</p>
-</div>
-</div>
+<a href="project1.html" class="card p-5 rounded-xl shadow hover:scale-105 transition">
+<h3 class="font-semibold">Invoice Intelligence (Donut)</h3>
+<p class="text-sm">10K+ invoices • 95% accuracy</p>
+</a>
 
+<a href="project2.html" class="card p-5 rounded-xl shadow hover:scale-105 transition">
+<h3 class="font-semibold">Federated Learning (DP)</h3>
+<p class="text-sm">200M+ records • privacy ML</p>
+</a>
+
+</div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="mb-12">
+<section id="education" class="mb-14">
 <h2 class="text-xl font-semibold mb-3">Education</h2>
-<p>NCSU – MS Data Science</p>
+<p>MS Data Science — NC State University</p>
+<p>B.Tech AI & DS — Pune University</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="mb-12">
+<section id="contact">
 <h2 class="text-xl font-semibold mb-3">Contact</h2>
 <p>Email: sagulhan@ncsu.edu</p>
 </section>
 
-<footer class="text-xs text-slate-500 border-t pt-4">
-© <span id="year"></span> Shrawani Gulhane
-</footer>
-
 </div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const body = document.getElementById("body");
-const toggle = document.getElementById("themeToggle");
-const circle = document.getElementById("toggleCircle");
-
-function setDark(){
-body.classList.add("bg-slate-900","text-white","dark");
-circle.style.transform="translateX(28px)";
-localStorage.setItem("theme","dark");
-}
-
-function setLight(){
-body.classList.remove("bg-slate-900","text-white","dark");
-body.classList.add("bg-slate-50","text-slate-900");
-circle.style.transform="translateX(0px)";
-localStorage.setItem("theme","light");
-}
-
 function toggleTheme(){
-toggle.checked ? setDark() : setLight();
+document.body.classList.toggle("dark");
 }
-
-function loadTheme(){
-const saved=localStorage.getItem("theme");
-if(saved==="dark"){toggle.checked=true;setDark();}
-}
-
-const sections=document.querySelectorAll("section");
-const links=document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll",()=>{
-let current="";
-sections.forEach(sec=>{
-const top=sec.offsetTop-120;
-if(scrollY>=top) current=sec.id;
-});
-
-links.forEach(link=>{
-link.classList.remove("active");
-if(link.getAttribute("href")==="#"+current){
-link.classList.add("active");
-}
-});
-});
-
-loadTheme();
 </script>
 
 </body>
