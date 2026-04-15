@@ -570,7 +570,7 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
 
   <div class="pc-hint">&#8599; Click to read more</div>
 </div>
-      <div class="pc reveal" onclick="openModal('p2')">
+      <div class="pc reveal" onclick="openModal('p3')">
         <h3>Federated Learning with Differential Privacy</h3>
         <p>Capstone at Oak Ridge National Lab. ML pipeline across 200M+ records with federated aggregation and DP-SGD privacy guarantees. 22% accuracy gain.</p>
         <div class="pc-stats"><span class="stp">200M+ records</span><span class="stp">22% accuracy gain</span><span class="stp">Oak Ridge Lab</span></div>
@@ -925,16 +925,16 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
 
   /* PROJECTS MODAL */
   var projects = {
-   p1: {
+  p1: {
   badge: 'Data Engineering · Streaming Systems',
 
   title: 'Real-Time Data Pipeline for Streaming Analytics',
 
   stats: ['2M+ events', 'Real-time processing', 'ETL pipeline'],
 
-  desc: 'Designed and implemented a real-time data pipeline using Spark Structured Streaming to process continuous streams of user activity data. The system enables low-latency data ingestion, transformation, and storage for downstream analytics and reporting use cases.',
+  desc: 'Designed and implemented a real-time data pipeline using Spark Structured Streaming to process continuous streams of user activity data. The system enables low-latency ingestion, transformation, and storage for downstream analytics.',
 
-  highlights: '• Processed 2M+ simulated streaming event records using Spark Structured Streaming\n• Engineered streaming transformations for real-time event-level metric computation\n• Built end-to-end ETL pipeline for ingestion, processing, and storage\n• Integrated AWS S3 as a data lake for scalable storage of processed outputs\n• Improved query-ready data availability for downstream analytics systems',
+  highlights: '• Processed 2M+ simulated streaming event records\n• Built streaming transformations for event-level metrics\n• Designed end-to-end ETL pipeline for real-time data\n• Integrated AWS S3 as scalable data lake storage\n• Enabled downstream analytics with query-ready datasets',
 
   tags: [
     'Spark Structured Streaming',
@@ -944,6 +944,9 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
     'AWS S3',
     'Streaming Systems'
   ],
+
+  links: []
+},
     p2: {
   badge: 'Computer Vision · Healthcare AI',
   title: 'Diabetic Retinopathy Detection using CNN',
