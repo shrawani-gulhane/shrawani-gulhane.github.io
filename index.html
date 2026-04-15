@@ -546,18 +546,30 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
   </section>
 
   <section id="projects">
-    <p class="slabel">Selected Work</p>
+    
     <h2>Projects</h2>
     <div class="pg">
 
       <div class="pc reveal" onclick="openModal('p1')">
-        <h3>Invoice Intelligence &mdash; Document AI</h3>
-        <p>Fine-tuned a DONUT transformer on 10K+ invoice images to automate document data extraction across 50+ templates, achieving 94.3% field-level accuracy.</p>
-        <div class="pc-stats"><span class="stp">94.3% accuracy</span><span class="stp">50% fewer errors</span></div>
-        <div class="pc-tags"><span class="ptag">PyTorch</span><span class="ptag">Donut</span><span class="ptag">Transformers</span><span class="ptag">NLP</span></div>
-        <div class="pc-hint">&#8599; Click to read more</div>
-      </div>
+  <h3>Real-Time Data Pipeline for Streaming Analytics</h3>
 
+  <p>Built a scalable real-time data pipeline using Spark Structured Streaming to process continuous event data and enable streaming analytics use cases.</p>
+
+  <div class="pc-stats">
+    <span class="stp">2M+ events</span>
+    <span class="stp">Real-time processing</span>
+    <span class="stp">ETL pipeline</span>
+  </div>
+
+  <div class="pc-tags">
+    <span class="ptag">Spark</span>
+    <span class="ptag">PySpark</span>
+    <span class="ptag">Streaming</span>
+    <span class="ptag">AWS S3</span>
+  </div>
+
+  <div class="pc-hint">&#8599; Click to read more</div>
+</div>
       <div class="pc reveal" onclick="openModal('p2')">
         <h3>Federated Learning with Differential Privacy</h3>
         <p>Capstone at Oak Ridge National Lab. ML pipeline across 200M+ records with federated aggregation and DP-SGD privacy guarantees. 22% accuracy gain.</p>
@@ -913,15 +925,25 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
 
   /* PROJECTS MODAL */
   var projects = {
-    p1: {
-      badge: 'NLP · Document AI',
-      title: 'Invoice Intelligence — Document AI',
-      stats: ['94.3% accuracy', '50% fewer errors', '10K+ invoices'],
-      desc: 'Fine-tuned a DONUT transformer on 10K+ invoice images to automate document data extraction, achieving 94.3% accuracy for structured field extraction. Developed a PyTorch Lightning training pipeline for 50+ invoice templates, improving template-level extraction accuracy by 23.4% across formats. Designed evaluation and prediction pipelines with field-level metrics, reducing extraction errors by 50% and accelerating model debugging cycles. Automated data extraction workflows, significantly reducing manual processing effort for downstream analytics.',
-      highlights: '• 94.3% accuracy for structured field extraction\n• 23.4% improvement in template-level accuracy across 50+ formats\n• 50% reduction in extraction errors via field-level metrics\n• Fully automated — no manual intervention needed per batch',
-      tags: ['PyTorch', 'PyTorch Lightning', 'Donut Transformer', 'Transformers', 'NLP', 'Python', 'Hugging Face'],
-      links: []
-    },
+   p1: {
+  badge: 'Data Engineering · Streaming Systems',
+
+  title: 'Real-Time Data Pipeline for Streaming Analytics',
+
+  stats: ['2M+ events', 'Real-time processing', 'ETL pipeline'],
+
+  desc: 'Designed and implemented a real-time data pipeline using Spark Structured Streaming to process continuous streams of user activity data. The system enables low-latency data ingestion, transformation, and storage for downstream analytics and reporting use cases.',
+
+  highlights: '• Processed 2M+ simulated streaming event records using Spark Structured Streaming\n• Engineered streaming transformations for real-time event-level metric computation\n• Built end-to-end ETL pipeline for ingestion, processing, and storage\n• Integrated AWS S3 as a data lake for scalable storage of processed outputs\n• Improved query-ready data availability for downstream analytics systems',
+
+  tags: [
+    'Spark Structured Streaming',
+    'PySpark',
+    'Data Engineering',
+    'ETL Pipelines',
+    'AWS S3',
+    'Streaming Systems'
+  ],
     p2: {
   badge: 'Computer Vision · Healthcare AI',
   title: 'Diabetic Retinopathy Detection using CNN',
