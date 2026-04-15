@@ -587,12 +587,27 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
 </div>
 
       <div class="pc reveal" onclick="openModal('p4')">
-        <h3>Survey Analytics &amp; Program Evaluation Pipeline</h3>
-        <p>End-to-end Python pipeline processing 40K+ survey records linking pre/post responses across 60+ variables to measure behavioral change for NC State faculty.</p>
-        <div class="pc-stats"><span class="stp">40K+ records</span><span class="stp">60+ variables</span></div>
-        <div class="pc-tags"><span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">SciPy</span><span class="ptag">Power BI</span></div>
-        <div class="pc-hint">&#8599; Click to read more</div>
-      </div>
+        <h3>Hand-Sign Talk System (Sign Language Translation)</h3>
+        <div class="pc reveal" onclick="openModal('p4')">
+  <h3>Hand-Sign Talk System</h3>
+
+  <p>Built a real-time sign language translation system using computer vision and NLP to enable communication between hearing and hearing-impaired users.</p>
+
+  <div class="pc-stats">
+    <span class="stp">94% accuracy</span>
+    <span class="stp">1K+ videos</span>
+    <span class="stp">Real-time CV</span>
+  </div>
+
+  <div class="pc-tags">
+    <span class="ptag">OpenCV</span>
+    <span class="ptag">CNN</span>
+    <span class="ptag">NLP</span>
+    <span class="ptag">Python</span>
+  </div>
+
+  <div class="pc-hint">&#8599; Click to read more</div>
+</div>
 
     </div>
   </section>
@@ -939,14 +954,28 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
       links: []
     },
     p4: {
-      badge: 'Analytics · Survey Research',
-      title: 'Survey Analytics & Program Evaluation Pipeline',
-      stats: ['40K+ records', '60+ variables', 'NC State University'],
-      desc: 'Built and maintained a Python pipeline processing 40K+ survey records used for program evaluation at NC State University. Designed longitudinal datasets linking pre/post responses to track behavioral change across 60+ variables. Applied statistical testing to measure program impact and support faculty decision-making. Delivered dashboards and reports used by faculty to improve outreach, program strategies, and effectiveness.',
-      highlights: '• Longitudinal dataset design linking pre/post survey responses\n• Statistical testing to quantify program impact\n• 60+ behavioral and outcome variables tracked\n• Dashboards directly used by faculty to drive program decisions',
-      tags: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Statistical Testing', 'Power BI', 'Data Cleaning'],
-      links: []
-    }
+  badge: 'Computer Vision · Accessibility AI',
+
+  title: 'Hand-Sign Talk System (Sign Language Translation)',
+
+  stats: ['94% accuracy', '1K+ videos', 'Real-time translation'],
+
+  desc: 'Developed an end-to-end sign language translation system that bridges communication between hearing and hearing-impaired users. The system leverages computer vision for gesture recognition and NLP techniques to convert detected gestures into meaningful text output in real time.',
+
+  highlights: '• Achieved 94% accuracy on ISL gesture classification using CNN\n• Trained on 1K+ labeled sign language video samples\n• Implemented OpenCV-based real-time gesture detection pipeline\n• Built text-to-sign conversion pipeline using tokenized NLP mapping\n• Developed full end-to-end system with user interface for accessibility',
+
+  tags: [
+    'Python',
+    'OpenCV',
+    'CNN',
+    'Computer Vision',
+    'NLP',
+    'Deep Learning',
+    'Real-time Systems'
+  ],
+
+  links: []
+}
   };
 
   function openModal(id) {
