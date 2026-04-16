@@ -939,96 +939,76 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
   /* PROJECTS MODAL */
   var projects = {
   p1: {
-  badge: 'Data Engineering · Streaming Systems',
+    badge: 'Data Engineering · Streaming Systems',
+    title: 'Real-Time Data Pipeline for Streaming Analytics',
+    stats: ['2M+ events', 'Real-time processing', 'ETL pipeline'],
+    desc: 'Designed and implemented a real-time data pipeline using Spark Structured Streaming to process continuous streams of user activity data. The system enables low-latency ingestion, transformation, and storage for downstream analytics.',
+    highlights: '• Processed 2M+ simulated streaming event records\n• Built streaming transformations for event-level metrics\n• Designed end-to-end ETL pipeline for real-time data\n• Integrated AWS S3 as scalable data lake storage\n• Enabled downstream analytics with query-ready datasets',
+    tags: [
+      'Spark Structured Streaming',
+      'PySpark',
+      'Data Engineering',
+      'ETL Pipelines',
+      'AWS S3',
+      'Streaming Systems'
+    ],
+    links: []
+  },
 
-  title: 'Real-Time Data Pipeline for Streaming Analytics',
+  p2: {
+    badge: 'Natural Language Processing · Legal AI',
+    title: 'Legal Case Document Summarization using NLP',
+    stats: ['7K+ documents', 'Long-text summarization', 'Transformer models'],
+    desc: 'Developed and evaluated extractive and abstractive summarization models for long legal case documents. The project addresses challenges in legal NLP such as long document length, domain-specific language, and evaluation complexity.',
+    highlights: '• Built and compared extractive and abstractive summarization models\n• Worked with large-scale datasets including 7K+ legal documents (IN-Abs, UK-Abs)\n• Implemented transformer models like BART, Legal-Pegasus, and Longformer\n• Applied chunking strategies for long-document summarization\n• Evaluated performance using ROUGE, BERTScore, and expert validation',
+    tags: [
+      'NLP',
+      'Transformers',
+      'BART',
+      'Legal-Pegasus',
+      'Longformer',
+      'Text Summarization',
+      'Deep Learning'
+    ],
+    links: []
+  },
 
-  stats: ['2M+ events', 'Real-time processing', 'ETL pipeline'],
+  p3: {
+    badge: 'Computer Vision · Healthcare AI',
+    title: 'Diabetic Retinopathy Detection using CNN',
+    stats: ['96% accuracy', '5 severity classes', 'Healthcare AI'],
+    desc: 'Developed a deep learning-based image classification system to detect and classify diabetic retinopathy (DR) from retinal fundus images. The model automates disease detection, reducing dependency on manual diagnosis and enabling early intervention to prevent vision loss. The system classifies images into five severity levels ranging from no DR to proliferative DR.',
+    highlights: '• Achieved 96% classification accuracy on retinal image dataset\n• Built using ResNet-152 for high-performance image feature extraction\n• Processed high-resolution medical images with preprocessing and augmentation\n• Implemented CLAHE, cropping, and normalization to enhance image quality\n• Enabled automated and scalable screening for early disease detection',
+    tags: [
+      'PyTorch',
+      'CNN',
+      'ResNet-152',
+      'Computer Vision',
+      'Deep Learning',
+      'Image Processing',
+      'Healthcare AI'
+    ],
+    links: []
+  },
 
-  desc: 'Designed and implemented a real-time data pipeline using Spark Structured Streaming to process continuous streams of user activity data. The system enables low-latency ingestion, transformation, and storage for downstream analytics.',
-
-  highlights: '• Processed 2M+ simulated streaming event records\n• Built streaming transformations for event-level metrics\n• Designed end-to-end ETL pipeline for real-time data\n• Integrated AWS S3 as scalable data lake storage\n• Enabled downstream analytics with query-ready datasets',
-
-  tags: [
-    'Spark Structured Streaming',
-    'PySpark',
-    'Data Engineering',
-    'ETL Pipelines',
-    'AWS S3',
-    'Streaming Systems'
-  ],
-
-  links: []
-},
-    p2: {
-  badge: 'Computer Vision · Healthcare AI',
-  title: 'Diabetic Retinopathy Detection using CNN',
-
-  stats: ['96% accuracy', '5 severity classes', 'Healthcare AI'],
-
-  desc: 'Developed a deep learning-based image classification system to detect and classify diabetic retinopathy (DR) from retinal fundus images. The model automates disease detection, reducing dependency on manual diagnosis and enabling early intervention to prevent vision loss. The system classifies images into five severity levels ranging from no DR to proliferative DR.',
-
-  highlights: '• Achieved 96% classification accuracy on retinal image dataset\n• Built using ResNet-152 for high-performance image feature extraction\n• Processed high-resolution medical images with preprocessing and augmentation\n• Implemented CLAHE, cropping, and normalization to enhance image quality\n• Enabled automated and scalable screening for early disease detection',
-
-  tags: [
-    'PyTorch',
-    'CNN',
-    'ResNet-152',
-    'Computer Vision',
-    'Deep Learning',
-    'Image Processing',
-    'Healthcare AI'
-  ],
-
-  links: []
-},
-    p2: {
-  badge: 'Natural Language Processing · Legal AI',
-
-  title: 'Legal Case Document Summarization using NLP',
-
-  stats: ['7K+ documents', 'Long-text summarization', 'Transformer models'],
-
-  desc: 'Developed and evaluated extractive and abstractive summarization models for long legal case documents. The project addresses challenges in legal NLP such as long document length, domain-specific language, and evaluation complexity.',
-
-  highlights: '• Built and compared extractive and abstractive summarization models\n• Worked with large-scale datasets including 7K+ legal documents (IN-Abs, UK-Abs)\n• Implemented transformer models like BART, Legal-Pegasus, and Longformer\n• Applied chunking strategies for long-document summarization\n• Evaluated performance using ROUGE, BERTScore, and expert validation',
-
-  tags: [
-    'NLP',
-    'Transformers',
-    'BART',
-    'Legal-Pegasus',
-    'Longformer',
-    'Text Summarization',
-    'Deep Learning'
-  ],
-
-  links: []
-}
-    p4: {
-  badge: 'Computer Vision · Accessibility AI',
-
-  title: 'Hand-Sign Talk System (Sign Language Translation)',
-
-  stats: ['94% accuracy', '1K+ videos', 'Real-time translation'],
-
-  desc: 'Developed an end-to-end sign language translation system that bridges communication between hearing and hearing-impaired users. The system leverages computer vision for gesture recognition and NLP techniques to convert detected gestures into meaningful text output in real time.',
-
-  highlights: '• Achieved 94% accuracy on ISL gesture classification using CNN\n• Trained on 1K+ labeled sign language video samples\n• Implemented OpenCV-based real-time gesture detection pipeline\n• Built text-to-sign conversion pipeline using tokenized NLP mapping\n• Developed full end-to-end system with user interface for accessibility',
-
-  tags: [
-    'Python',
-    'OpenCV',
-    'CNN',
-    'Computer Vision',
-    'NLP',
-    'Deep Learning',
-    'Real-time Systems'
-  ],
-
-  links: []
-}
-  };
+  p4: {
+    badge: 'Computer Vision · Accessibility AI',
+    title: 'Hand-Sign Talk System (Sign Language Translation)',
+    stats: ['94% accuracy', '1K+ videos', 'Real-time translation'],
+    desc: 'Developed an end-to-end sign language translation system that bridges communication between hearing and hearing-impaired users. The system leverages computer vision for gesture recognition and NLP techniques to convert detected gestures into meaningful text output in real time.',
+    highlights: '• Achieved 94% accuracy on ISL gesture classification using CNN\n• Trained on 1K+ labeled sign language video samples\n• Implemented OpenCV-based real-time gesture detection pipeline\n• Built text-to-sign conversion pipeline using tokenized NLP mapping\n• Developed full end-to-end system with user interface for accessibility',
+    tags: [
+      'Python',
+      'OpenCV',
+      'CNN',
+      'Computer Vision',
+      'NLP',
+      'Deep Learning',
+      'Real-time Systems'
+    ],
+    links: []
+  }
+};
 
   function openModal(id) {
     var p = projects[id];
