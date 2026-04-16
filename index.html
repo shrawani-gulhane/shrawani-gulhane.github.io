@@ -571,12 +571,25 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
   <div class="pc-hint">&#8599; Click to read more</div>
 </div>
       <div class="pc reveal" onclick="openModal('p3')">
-        <h3>Federated Learning with Differential Privacy</h3>
-        <p>Capstone at Oak Ridge National Lab. ML pipeline across 200M+ records with federated aggregation and DP-SGD privacy guarantees. 22% accuracy gain.</p>
-        <div class="pc-stats"><span class="stp">200M+ records</span><span class="stp">22% accuracy gain</span><span class="stp">Oak Ridge Lab</span></div>
-        <div class="pc-tags"><span class="ptag">PyTorch</span><span class="ptag">DP-SGD</span><span class="ptag">Power BI</span><span class="ptag">SQL</span></div>
-        <div class="pc-hint">&#8599; Click to read more</div>
-      </div>
+  <h3>Legal Case Document Summarization (NLP)</h3>
+
+  <p>Built and evaluated extractive and abstractive NLP models to summarize long legal case documents using transformer-based architectures.</p>
+
+  <div class="pc-stats">
+    <span class="stp">7K+ documents</span>
+    <span class="stp">Long-text NLP</span>
+    <span class="stp">ROUGE evaluation</span>
+  </div>
+
+  <div class="pc-tags">
+    <span class="ptag">NLP</span>
+    <span class="ptag">BART</span>
+    <span class="ptag">Legal-Pegasus</span>
+    <span class="ptag">Transformers</span>
+  </div>
+
+  <div class="pc-hint">&#8599; Click to read more</div>
+</div>
 
       <div class="pc reveal" onclick="openModal('p2')">
       <h3>Diabetic Retinopathy Detection using CNN</h3>
@@ -969,15 +982,29 @@ footer{text-align:center;padding:28px 24px;font-family:'DM Mono',monospace;font-
 
   links: []
 },
-    p3: {
-      badge: 'Data Engineering · Streaming',
-      title: 'Real-Time Streaming Analytics Pipeline',
-      stats: ['2M+ events/run', '40% faster availability', 'Near real-time'],
-      desc: 'Built a real-time data pipeline using Apache Kafka and Spark Streaming to process 2M+ events per run. Implemented Spark Structured Streaming transformations for cleaning, parsing, and aggregating streaming data. Developed automated streaming ETL workflows that significantly improved data availability for downstream analytics teams. Designed scalable storage using AWS S3 and distributed processing frameworks.',
-      highlights: '• 40% improvement in data availability for analytics\n• Automated ETL reduced manual intervention to near zero\n• Spark Structured Streaming for real-time cleaning and aggregation\n• S3-backed scalable storage with distributed processing',
-      tags: ['Apache Kafka', 'Spark Streaming', 'AWS S3', 'PySpark', 'Python', 'ETL', 'Spark Structured Streaming'],
-      links: []
-    },
+    p2: {
+  badge: 'Natural Language Processing · Legal AI',
+
+  title: 'Legal Case Document Summarization using NLP',
+
+  stats: ['7K+ documents', 'Long-text summarization', 'Transformer models'],
+
+  desc: 'Developed and evaluated extractive and abstractive summarization models for long legal case documents. The project addresses challenges in legal NLP such as long document length, domain-specific language, and evaluation complexity.',
+
+  highlights: '• Built and compared extractive and abstractive summarization models\n• Worked with large-scale datasets including 7K+ legal documents (IN-Abs, UK-Abs)\n• Implemented transformer models like BART, Legal-Pegasus, and Longformer\n• Applied chunking strategies for long-document summarization\n• Evaluated performance using ROUGE, BERTScore, and expert validation',
+
+  tags: [
+    'NLP',
+    'Transformers',
+    'BART',
+    'Legal-Pegasus',
+    'Longformer',
+    'Text Summarization',
+    'Deep Learning'
+  ],
+
+  links: []
+}
     p4: {
   badge: 'Computer Vision · Accessibility AI',
 
